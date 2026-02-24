@@ -42,23 +42,32 @@
 
 
 
-                    <div class="project-card info-card">
-                        <div class="project-image">
-                            <img src="../assets/Screenshot 2026-01-21 090441.png" alt="Cleaning Service">
+                    <div class="project-card" data-project-id="cleaning">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/Screenshot 2026-01-21 090441.png" alt="Cleaning Service" class="project-img active">
+                                <img src="../assets/Screenshot 2026-02-24 185344.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 185545.png" alt="Alt 1" class="project-img">
+                            </div>
                         </div>
-                        <div class="project-info">
+                        <button class="carousel-btn prev" onclick="moveCarousel('cleaning', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('cleaning', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
                             <h3>Cleaning Service</h3>
                             <p class="description">A professional service platform offering premium cleaning solutions
                                 for homes and offices.</p>
-                            <div class="tech-stack">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
+                            <ul>
+                                <li>Framework: HTML, CSS</li>
+                                <li>Clean UI & Responsive Design</li>
+                                <li>Service Listings & Booking Flow</li>
+                            </ul>
                             <div class="project-links">
-                                <a href=" https://mvayyappan.github.io/Static-Cleaner-site/" class="btn btn-primary"><i
+                                <a href="https://mvayyappan.github.io/Static-Cleaner-site/" target="_blank"><i
                                         class="fa-solid fa-eye"></i> View</a>
-                                <a href="https://github.com/mvayyappan/Static-Cleaner-site.git"
-                                    class="btn btn-secondary"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/mvayyappan/Static-Cleaner-site.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -66,52 +75,74 @@
 
 
 
-                    <div class="project-card info-card">
-                        <div class="project-image">
-                            <img src="../assets/image.png" alt="Movie review">
+
+
+                    <div class="project-card" data-project-id="movie">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/image.png" alt="Movie Review" class="project-img active">
+                                <img src="../assets/Screenshot 2026-02-24 190302.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 190333.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 190401.png" alt="Alt 1" class="project-img">
+                            </div>
                         </div>
-                        <div class="project-info">
+                        <button class="carousel-btn prev" onclick="moveCarousel('movie', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('movie', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
                             <h3>Movie Review</h3>
                             <p class="description">A platform for movie enthusiasts to explore latest releases and share
                                 detailed reviews and ratings.</p>
-                            <div class="tech-stack">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
+                            <ul>
+                                <li>Technologies: HTML, CSS</li>
+                                <li>Dynamic Movie Lists</li>
+                                <li>User Reviews & Ratings</li>
+                            </ul>
                             <div class="project-links">
-                                <a href="https://mvayyappan.github.io/Movie_review_Website/" class="btn btn-primary"><i
+                                <a href="https://mvayyappan.github.io/Movie_review_Website/" target="_blank"><i
                                         class="fa-solid fa-eye"></i> View</a>
-                                <a href="https://github.com/mvayyappan/Movie_review_Website.git"
-                                    class="btn btn-secondary"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/mvayyappan/Movie_review_Website.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
 
 
 
-
-
-                    <div class="project-card info-card">
-                        <div class="project-image">
-                            <img src="../assets/Screenshot 2026-01-21 082028.png" alt="MY Study Life">
+                    <div class="project-card" data-project-id="study">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/Screenshot 2026-01-21 082028.png" alt="My Study Life"
+                                    class="project-img active">
+                                <img src="../assets/Screenshot 2026-02-24 191026.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 190929.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 190910.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/Screenshot 2026-02-24 191026.png" alt="Alt 1" class="project-img">
+                            </div>
                         </div>
-                        <div class="project-info">
+                        <button class="carousel-btn prev" onclick="moveCarousel('study', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('study', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
                             <h3>My Study Life</h3>
                             <p class="description">A comprehensive student productivity suite for managing schedules,
                                 assignments, and study sessions.</p>
-                            <div class="tech-stack">
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>HTML/CSS</span>
-                            </div>
+                            <ul>
+                                <li>Backend: Python, FastAPI</li>
+                                <li>Productivity Tools & Tracking</li>
+                                <li>Database: PostgreSQL Support</li>
+                            </ul>
                             <div class="project-links">
-                                <a href="https://mvayyappan.github.io/MY-STUDY-LIFE/" class="btn btn-primary"><i
+                                <a href="https://mvayyappan.github.io/MY-STUDY-LIFE/" target="_blank"><i
                                         class="fa-solid fa-eye"></i> View</a>
-                                <a href="https://github.com/mvayyappan/MY-STUDY-LIFE.git" class="btn btn-secondary"><i
-                                        class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/mvayyappan/MY-STUDY-LIFE.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -170,6 +201,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/projects.js"></script>
 </body>
 
 </html>

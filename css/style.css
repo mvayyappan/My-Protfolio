@@ -58,6 +58,79 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.hamburger.active+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem 0;
+        gap: 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0.8rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+}
+
 /* Video Background */
 .video-container {
     position: fixed;
@@ -463,6 +536,54 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .name {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0px;
+        margin-bottom: 0.5rem;
+    }
+
+    .role {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .description {
+        font-size: 0.9rem !important;
+        line-height: 1.6;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    .footer-container {
+        padding: 0 20px !important;
+    }
+}
+
 /* About Section */
 .about-section {
     padding: 100px 0;
@@ -542,6 +663,73 @@ footer {
 
     .about-text .description {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 50px 0;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .about-text .section-title {
+        font-size: 2rem;
+    }
+
+    .about-text .description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .about-photo .profile-img {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+
+    .footer-main-grid {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+        font-size: 0.9rem;
+    }
+
+    .contact-info div {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+        max-width: 100%;
+    }
+
+    .newsletter-form input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
@@ -768,5 +956,37 @@ footer {
 
     .edu-title {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-section {
+        padding: 50px 0;
+    }
+
+    .education-section .section-title {
+        font-size: 2rem;
+    }
+
+    .education-grid {
+        gap: 20px;
+    }
+
+    .edu-card {
+        height: 200px;
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .edu-date {
+        font-size: 0.8rem;
+    }
+
+    .edu-title {
+        font-size: 1.1rem;
+    }
+
+    .edu-location {
+        font-size: 0.8rem;
     }
 }
