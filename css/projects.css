@@ -1,8 +1,5 @@
-/* Projects Page Specific Styles V2 */
-
 :root {
     --rose-color: #a855f7;
-    /* Matches the vibrant purple in the screenshot */
     --rose-glow: rgba(168, 85, 247, 0.4);
 }
 
@@ -24,18 +21,17 @@
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* Single column layout */
     gap: 40px;
     max-width: 1000px;
-    /* Narrower container for better single column look */
     margin: 0 auto;
     padding: 0 80px;
-    /* Generous padding for outside arrows */
 }
+
 
 .project-card {
     position: relative;
-    height: 600px;
+    height: 700px;
+    width: 870px;
     background: #0f172a;
     border-radius: 12px;
     transition: all 0.4s ease;
@@ -70,7 +66,6 @@
     opacity: 1;
 }
 
-/* Carousel Buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -81,10 +76,8 @@
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    /* Square with slight rounding */
     cursor: pointer;
     z-index: 20;
-    /* High z-index to stay above the hover info panel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +99,7 @@
 }
 
 
-/* Hover Info State */
+
 .project-hover-info {
     position: absolute;
     top: 0;
@@ -124,7 +117,6 @@
     flex-direction: column;
     border: 3px solid var(--rose-color);
     border-radius: 12px;
-    /* Ensure hover panel matches card radius */
 }
 
 .project-card:hover .project-hover-info {
@@ -132,7 +124,6 @@
     visibility: visible;
 }
 
-/* Hide hover info when arrows are being hovered so user can see the image */
 .carousel-btn:hover~.project-hover-info {
     opacity: 0 !important;
     visibility: hidden !important;
@@ -195,7 +186,6 @@
     opacity: 0.7;
 }
 
-/* Responsiveness */
 @media (max-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);

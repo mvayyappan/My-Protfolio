@@ -244,51 +244,6 @@ body {
   border: 2px dashed #e0e0e0;
 }
 
-
-.faq-section {
-  background: white;
-  border-radius: 20px;
-  padding: 50px;
-  margin-top: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.faq-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 20px;
-}
-
-.faq-item:last-child {
-  border-bottom: none;
-}
-
-.faq-question {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.faq-answer {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.7;
-  padding-left: 35px;
-}
-
-
 @media (max-width: 968px) {
   .hero-section p {
     font-size: 18px;
