@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayyappan | Portfolio</title>
-    <link rel="icon" href="assets/Screenshot 2025-10-29 151646.png" style="border-radius: 100%
-    ;" type="image/x-icon">
-
+    <link rel="icon" href="" style="border-radius: 100%;" >
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/skills.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="nav-logo">Ayyappan</div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger" id="hamburger"></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="pages/projects.html">Projects</a></li>
@@ -34,227 +23,133 @@
         </ul>
     </nav>
 
+    <div class="hero-video-container">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="assets/videos/index_backgroud_video.mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
 
 
     <main class="content">
         <div class="hero">
-            <h1 class="name">M V AYYAPPAN</h1>
-            <div class="info-card">
-                <p class="description">
-                    Passionate about building stunning digital experiences. Specializing in modern web technologies and
-                    elegant UI designs.
-                </p>
-                <div class="cta-buttons">
-                    <a href="pages/projects.html" class="btn btn-primary">View Projects</a>
-                    <a href="pages/contactus.html" class="btn btn-secondary">Get In Touch</a>
-                    <a href="./assets/Ayyappan_Resume.pdf" target="_blank" class="btn btn-secondary"
-                        download="Ayyappan_Resume_CV">Download Resume</a>
+            <div class="hero-container">
+                <div class="hero-image-col">
+                    <div class="image-frame">
+                        <div class="frame-backdrop"></div>
+                        <img src="assets/images/Ayyappan1.jpeg" alt="Profile" class="hero-profile-img">
+                    </div>
+                </div>
+                <div class="hero-text-col">
+                    <h1 class="hero-title">My Self <span class="highlight">Ayyappan</span></h1>
+                    <h2 class="hero-subtitle">
+                        <i class="fa-solid fa-share-nodes"></i> Aspiring Web Developer
+                    </h2>
+                    <p class="hero-desc">
+                        Passionate about building stunning digital experiences. Specializing in modern web technologies
+                        and elegant UI designs.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="./assets/Ayyappan_Resume.pdf" target="_blank" download="Ayyappan_Resume_CV"
+                            class="btn btn-pink">Download CV</a>
+                        <a href="#about" class="btn btn-pink">More Info</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <section id="about" class="about-section">
-        <div class="container footer-container">
-            <div class="about-grid info-card">
-                <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="description">
-                        My name is Ayyappan, and I’m from Paramakudi, Ramanathapuram district.
-                        I have completed my 12th grade at S.N.V. Government Model Higher Secondary School.
-                        Currently, I am learning at Freshworks Academy, where I’ve been studying for the past four
-                        months.
+        <div class="container custom-container">
+            <h2 class="section-title text-center">About <span class="highlight">Me</span></h2>
+
+            <div class="about-content-grid">
+                <!-- Left Column -->
+                <div class="about-left">
+                    <p class="about-desc">
+                        My name is Ayyappan, and I’m from Paramakudi, Ramanathapuram district. I have completed my 12th
+                        grade at S.N.V. Government Model Higher Secondary School. I am a hard-working person and a fast
+                        learner, always trying to improve my skills step by step. My goal is to become a software
+                        developer in the future and build useful projects that help people.
                     </p>
-                    <p class="description">
-                        I’m learning HTML, CSS, SQL, and Python, and I enjoy learning new things related to web
-                        development.
-                        I am a hard-working person and a fast learner, always trying to improve my skills step by step.
-                        My goal is to become a software developer in the future and build useful projects that help
-                        people.
-                    </p>
+
+                    <ul class="personal-info">
+                        <li><strong>Full Name</strong><span>: M V Ayyappan</span></li>
+                        <li><strong>Age</strong><span>: 18 Years</span></li>
+                        <li><strong>Language</strong><span>: Tamil, English</span></li>
+                        <li><strong>Phone No</strong><span>: +91 9360649867</span></li>
+                        <li><strong>Email</strong><span>: mvayyappan10@gmail.com</span></li>
+                        <li><strong>Address</strong><span>: 111/1, Kamarajar Street, Paramakudi</span></li>
+                    </ul>
                 </div>
-                <div class="about-photo">
-                    <img src="assets/Ayyappan.png" alt="Ayyappan Profile" class="profile-img">
+
+                <!-- Right Column (Progress Bars) -->
+                <div class="about-right">
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-pct">80%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">JAVASCRIPT</span>
+                            <span class="skill-pct">70%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">PYTHON</span>
+                            <span class="skill-pct">65%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">React</span>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-top">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-pct">50%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <div class="skills-container">
-            <h2 class="section-title">My Skills</h2>
 
-            <div class="skills-tabs">
-                <button class="tab-btn active" data-filter="all">All</button>
-                <button class="tab-btn" data-filter="frontend">Frontend</button>
-                <button class="tab-btn" data-filter="backend">Backend</button>
-                <button class="tab-btn" data-filter="tools">Tools</button>
-            </div>
-
-            <div class="skills-grid">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-card"
-                    data-category="frontend" data-skill="html">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
-                    <span class="skill-name">HTML</span>
-                    <span class="skill-desc">Structure markup language.</span>
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-card"
-                    data-category="frontend" data-skill="css">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
-                    <span class="skill-name">CSS</span>
-                    <span class="skill-desc">Styling language.</span>
-                </a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-card"
-                    data-category="frontend" data-skill="js">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-desc">Scripting language for interactivity.</span>
-                </a>
-                <a href="https://getbootstrap.com/" target="_blank" class="skill-card" data-category="frontend"
-                    data-skill="bootstrap">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-bootstrap"></i></div>
-                    <span class="skill-name">Bootstrap</span>
-                    <span class="skill-desc">A CSS framework for responsive design.</span>
-                </a>
-
-
-                <a href="https://www.python.org/" target="_blank" class="skill-card" data-category="backend"
-                    data-skill="python">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
-                    <span class="skill-name">Python</span>
-                    <span class="skill-desc">Programming language for backend logic, scripting, and data.</span>
-                </a>
-                <a href="https://fastapi.tiangolo.com/" target="_blank" class="skill-card" data-category="backend"
-                    data-skill="fastapi">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <span class="skill-name">FastAPI</span>
-                    <span class="skill-desc">A high-performance Python framework for building APIs.</span>
-                </a>
-                <a href="https://www.postgresql.org/" target="_blank" class="skill-card" data-category="backend"
-                    data-skill="postgresql">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-                    <span class="skill-name">PostgreSQL</span>
-                    <span class="skill-desc">An advanced, open-source relational database.</span>
-                </a>
-                <a href="https://github.com/" target="_blank" class="skill-card" data-category="backend"
-                    data-skill="github">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
-                    <span class="skill-name">GitHub</span>
-                    <span class="skill-desc">Version control and collaboration platform.</span>
-                </a>
-
-
-                <a href="https://code.visualstudio.com/" target="_blank" class="skill-card" data-category="tools"
-                    data-skill="vscode">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-                    <span class="skill-name">VS Code</span>
-                    <span class="skill-desc">An IDE/code editor for writing and debugging code.</span>
-                </a>
-                <a href="https://www.office.com/" target="_blank" class="skill-card" data-category="tools"
-                    data-skill="office">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon">
-                        <div class="ms-logo">
-                            <div class="ms-square ms-red"></div>
-                            <div class="ms-square ms-green"></div>
-                            <div class="ms-square ms-blue"></div>
-                            <div class="ms-square ms-yellow"></div>
-                        </div>
-                    </div>
-                    <span class="skill-name">MS Office</span>
-                    <span class="skill-desc">A suite of productivity software for documentation/analysis.</span>
-                </a>
-                <a href="https://www.office.com/launch/excel" target="_blank" class="skill-card" data-category="tools"
-                    data-skill="excel">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon">
-                        <div class="excel-custom-logo">X</div>
-                    </div>
-                    <span class="skill-name">MS Excel</span>
-                    <span class="skill-desc">Spreadsheet software for data analysis and management.</span>
-                </a>
-                <a href="https://www.figma.com/" target="_blank" class="skill-card" data-category="tools"
-                    data-skill="figma">
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
-                    <div class="skill-icon">
-                        <div class="figma-custom-logo">
-                            <div class="f-shape f1"></div>
-                            <div class="f-shape f2"></div>
-                            <div class="f-shape f3"></div>
-                            <div class="f-shape f4"></div>
-                            <div class="f-shape f5"></div>
-                        </div>
-                    </div>
-                    <span class="skill-name">Figma</span>
-                    <span class="skill-desc">A collaborative interface design tool.</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-
-            // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab-btn');
-            const cards = document.querySelectorAll('.skill-card');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Update active tab
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    const filter = tab.getAttribute('data-filter');
-
-                    // Filter cards with a simple fade effect
-                    cards.forEach(card => {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.9)';
-
-                        setTimeout(() => {
-                            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                                card.style.display = 'flex';
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'scale(1)';
-                                }, 50);
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        }, 300);
-                    });
-                });
-            });
-        });
-    </script>
 
     <section id="education" class="education-section">
         <div class="container footer-container">
@@ -329,6 +224,40 @@
         </div>
     </footer>
 
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Navbar scroll detection
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

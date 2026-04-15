@@ -23,10 +23,17 @@ body {
     align-items: center;
     padding: 1.5rem 4rem;
     z-index: 100;
-    background: rgba(10, 10, 10, 0.3);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 4rem;
 }
 
 .nav-logo {
@@ -132,6 +139,37 @@ body {
 }
 
 /* Video Background */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 60%, #0a0a0a 100%),
+        rgba(0, 0, 0, 0.4);
+}
 
 /* Content */
 .content {
@@ -143,15 +181,165 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 2rem;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+/* Custom Hero Template Styles */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: left;
+}
+
+.hero-image-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.image-frame {
+    position: relative;
+    width: 380px;
+    height: 380px;
+}
+
+.frame-backdrop {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: #f7709a;
+    border-radius: 30px;
+    transform: rotate(-10deg);
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.hero-profile-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 2;
+    background: #e2f0fb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text-col {
+    flex: 1;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.hero-title .highlight {
+    color: #f7709a;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-subtitle i {
+    color: #f7709a;
+    font-size: 1.3rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.btn-pink {
+    background: #f7709a;
+    color: #fff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-pink:hover {
+    background: #e65c87;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 112, 154, 0.4);
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding-top: 100px;
+    }
+
+    .hero-image-col {
+        max-width: 300px;
+    }
+
+    .image-frame {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-text-col {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}
+
+
 
 
 .name {
@@ -554,85 +742,129 @@ footer {
     }
 }
 
-/* About Section */
+/* About Me Section Layout */
 .about-section {
     padding: 100px 0;
     position: relative;
     z-index: 10;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    text-align: left;
-    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-.about-text .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.about-text .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background: #00d4ff;
-    border-radius: 2px;
-}
-
-.about-text .description {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
-}
-
-.about-photo {
-    display: flex;
-    justify-content: center;
-}
-
-.about-photo .profile-img {
+.text-center {
+    text-align: center;
     width: 100%;
-    max-width: 400px;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.5s ease;
 }
 
-.about-photo .profile-img:hover {
-    transform: translateY(-10px) scale(1.02);
+.section-title.text-center {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.section-title .highlight {
+    color: #f7709a;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: #cbd5e1;
+}
+
+.personal-info {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-info li {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+}
+
+.personal-info li strong {
+    width: 120px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.personal-info li span {
+    color: #94a3b8;
+}
+
+/* Progress Bars */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.progress-box {
+    width: 100%;
+}
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.skill-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.skill-pct {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
 }
 
 @media (max-width: 968px) {
-    .about-grid {
+    .about-content-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .about-text .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .about-photo {
-        order: -1;
-    }
-
-    .about-text .description {
-        font-size: 1rem;
+        gap: 3rem;
     }
 }
 
@@ -641,25 +873,24 @@ footer {
         padding: 50px 0;
     }
 
-    .about-grid {
-        gap: 30px;
+    .section-title.text-center {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
     }
 
-    .about-text .section-title {
-        font-size: 2rem;
+    .about-subtitle {
+        font-size: 1.2rem;
     }
 
-    .about-text .description {
-        font-size: 0.9rem;
-        line-height: 1.6;
+    .about-desc {
+        font-size: 0.95rem;
     }
 
-    .about-photo .profile-img {
-        max-width: 100%;
-        border-radius: 16px;
+    .personal-info li {
+        flex-direction: column;
+        gap: 5px;
     }
 
-    .footer-container {
         padding: 0 20px;
     }
 
