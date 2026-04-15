@@ -6,7 +6,6 @@
     <title>Ayyappan | Portfolio</title>
     <link rel="icon" href="" style="border-radius: 100%;" >
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/skills.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -17,9 +16,8 @@
         <div class="hamburger" id="hamburger"></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="pages/projects.html">Projects</a></li>
-            <li><a href="pages/resume.html">Resume</a></li>
-            <li><a href="pages/contactus.html">Contact</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -50,7 +48,7 @@
                         and elegant UI designs.
                     </p>
                     <div class="hero-actions">
-                        <a href="./assets/Ayyappan_Resume.pdf" target="_blank" download="Ayyappan_Resume_CV"
+                        <a href="./assets/files/Ayyappan_Resume.pdf" target="_blank" download="Ayyappan_Resume_CV"
                             class="btn btn-pink">Download CV</a>
                         <a href="#about" class="btn btn-pink">More Info</a>
                     </div>
@@ -156,7 +154,7 @@
             <h2 class="section-title">Education</h2>
             <div class="education-grid">
 
-                <div class="edu-card" style="background-image: url('assets/Screenshot\ 2026-01-21\ 221135.png')">
+                <div class="edu-card" style="background-image: url('assets/images/Screenshot\ 2026-01-21\ 221135.png')">
                     <div class="edu-content">
                         <div class="edu-date"><i class="fa-solid fa-calendar"></i> 2025 - 2026</div>
                         <h3 class="edu-title">Trainee at Freshworks STS Software Academy</h3>
@@ -164,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="edu-card" style="background-image: url('assets/snv.webp')">
+                <div class="edu-card" style="background-image: url('assets/images/snv.webp')">
                     <div class="edu-content">
                         <div class="edu-date"><i class="fa-solid fa-calendar"></i> 2023 - 2025</div>
                         <h3 class="edu-title">12th Grade - Higher Secondary Education</h3>
@@ -177,50 +175,218 @@
         </div>
     </section>
 
+    <main id="Projects" class="content">
+        <section class="projects-hero">
+            <h1 class="name">MY PROJECTS</h1>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container footer-container">
+                <div class="projects-grid">
 
 
+
+                    <div class="project-card" data-project-id="cleaning">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/images/cleaner1.png" alt="Cleaning Service"
+                                    class="project-img active">
+                                <img src="../assets/images/cleaner2.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/images/cleaner3.png" alt="Alt 1" class="project-img">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('cleaning', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('cleaning', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
+                            <h3>Cleaning Service</h3>
+                            <pre class="description">
+Beresin Cleaning Services is a premium professional cleaning platform designed to provide reliable, high-quality 
+maintenance solutions for homeowners and commercial businesses.
+
+The platform features a structured set of public pages including Home, About Us, Services, Pricing, Our Team, and Contact, 
+all designed to guide the user from discovery to booking.
+
+Service System:  Residential Cleaning, Commercial Solutions, Expert Staff
+
+Pricing & Plans: Basic Cleaning: $350, Pro Cleaning: $650Deluxe, Cleaning: $950
+
+Trust & Social Proof: Experience Tracking,Team Transparency,Testimonials.
+
+Engagement & Conversion: Newsletter,Contact Interface,Trusted Network. 
+
+Target Clients: Homeowners, Businesses,Busy Professionals.
+
+</pre>
+
+
+                            <div class="project-links">
+                                <a href="https://mvayyappan.github.io/Static-Cleaner-site/" target="_blank"><i
+                                        class="fa-solid fa-eye"></i> View</a>
+                                <a href="https://github.com/mvayyappan/Static-Cleaner-site.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="project-card" data-project-id="movie">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/images/movie1.png" alt="Movie Review" class="project-img active">
+                                <img src="../assets/images/movie2.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/images/movie3.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/images/movie4.png" alt="Alt 1" class="project-img">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('movie', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('movie', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
+                            <h3>Movie Review</h3>
+                            <pre class="description">Smart Preview System: High-performance "Poster-to-Trailer" transition. Hovering over any movie
+card smoothly reveals an auto-playing video trailer using custom CSS transitions.
+
+Integrated Music Jukebox: Each genre section features a curated audio player system, allowing
+users to listen to popular OSTs and theme music while browsing.
+
+Screen Explore (Detail Pages): Every movie has a dedicated page containing,
+Cinematic Metadata: Year, Runtime, Genre, Director, Cast, and IMDb ratings.
+Unified Media Player: A dual-player setup featuring both high-definition local .mp4 trailers and YouTube API embeds.
+Plot Insights: Detailed narrative summaries for deep-dive exploration.
+
+Category Architecture:
+Action: High-octane blockbusters (Coolie, Leo).
+Motivational: Inspiring real-life and fictional stories (Vaazhai, MS Dhoni).
+God: Mythological and spiritual epics (Kalki, Ram Setu).
+Love: Romance and emotional dramas (Raja Rani, Joe).
+Thrilling: Suspense and crime thrillers (Pushpa 2, Thunivu).
+Friendship: Relatable stories of bond and brotherhood ( Manjummel Boys, 96).
+Horror: Supernatural and psychological thrillers (Demonte Colony 2, Aranmanai).
+</pre>
+
+                            <div class="project-links">
+                                <a href="https://mvayyappan.github.io/Movie_Review_Website/" target="_blank"><i
+                                        class="fa-solid fa-eye"></i> View</a>
+                                <a href="https://github.com/mvayyappan/Movie_Review_Website.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="project-card" data-project-id="study">
+                        <div class="project-image-container">
+                            <div class="carousel-wrapper">
+                                <img src="../assets/images/mystudy1.png" alt="My Study Life"
+                                    class="project-img active">
+                                <img src="../assets/images/mystudy2.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/images/mystudy3.png" alt="Alt 1" class="project-img">
+                                <img src="../assets/images/mystudy4.png" alt="Alt 1" class="project-img">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="moveCarousel('study', -1)"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="moveCarousel('study', 1)"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-hover-info">
+                            <h3>My Study Life</h3>
+                            <pre class="description">My Study Life is a comprehensive educational technology platform designed to serve
+competitive exam aspirants preparing for government exams like TNPSC,SSC,Railway,Banking.
+
+The platform has structured public pages like Home, About, Contact, and secure Login/Signup.
+Welcome page for authenticated users, Quick access to all exam preparation paths.
+
+Quiz System: Quiz Selection with filter functionality, Interactive quiz interface with timer,
+Multiple choice questions with answer submission, Results dashboard showing score and accuracy.
+
+Notes System: Create, edit,and delete notes,Color-coded notes, Search and filter functionality.
+
+E-Books: Download 1st to 12th Standard School Books, All 3 Terms, Tamil & English Medium
+
+Profile & Progress Tracking: Account settings and password management,
+showing: Quizzes taken ,Average score, Overall accuracy,Current streak
+
+Competitive Exam Aspirants - Preparation for:
+TNPSC (Tamil Nadu Public Service Commission) - Groups 1, 2, 4
+SSC (Staff Selection Commission) - CGL, CHSL, MTS
+Bank Exams - PO/MT, SO, Clerk positions
+Railway Exams - Grades A, B, C, D</pre>
+                            <div class="project-links">
+                                <a href="https://mvayyappan.github.io/Full-Stack--My-Study-Life/" target="_blank"><i
+                                        class="fa-solid fa-eye"></i> View</a>
+                                <a href="https://github.com/mvayyappan/Full-Stack--My-Study-Life.git" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <div id="Contact" class="container">
+        <h2 class="section-title text-center">Contact Me</h2>
+        <div class="contact-grid">
+
+            <div class="contact-form-section">
+                <h2 class="form-title">Send us a Message</h2>
+
+                <div id="alertBox" class="alert"></div>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+91 98765 43210">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea id="message" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="map-section">
+                <h2 class="map-title">Our Location</h2>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=1233&amp;height=673&amp;hl=en&amp;q=paramakudi&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-main-grid">
-                <div class="footer-column">
-                    <h3>Quick Link</h3>
-                    <ul>
-                        <li><a href="../index.html#about">About Us</a></li>
-                        <li><a href="pages/contactus.html">Contact Us</a></li>
-                        <li><a href="pages/projects.html">Projects</a></li>
-                        <li><a href="pages/resume.html">Resume</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <div class="contact-info">
-                        <div><i class="fa-solid fa-location-dot"></i> 111/1, Kamarajar Street, Paramakudi</div>
-                        <div><i class="fa-solid fa-phone"></i> +91 9360649867</div>
-                        <div><i class="fa-solid fa-envelope"></i> mvayyappan10@gmail.com</div>
-                    </div>
-                    <div class="social-icons-footer">
-                        <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100090205914232" target="_blank"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.youtube.com/@MVAYYAPPAN"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/in/ayyappan-m-v-a6a048376/" target="_blank"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-container">
-            <div class="footer-bottom">
-                <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                    <i class="fa-solid fa-arrow-up"></i>
-                </button>
+            <div class="footer-bottom" style="justify-content: center; gap: 0; padding-top: 20px;">
                 <div class="copyright">
-                    &copy; Ayyappan, All Right Reserved.
-                </div>
-            </div>
+                    &copy; 2026 Ayyappan. All rights reserved.
         </div>
     </footer>
 
@@ -257,6 +423,64 @@
                 });
             }
         });
+
+
+        function moveCarousel(projectId, direction) {
+    const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
+    if (!card) return;
+
+    const images = card.querySelectorAll('.project-img');
+    let currentIndex = -1;
+
+    // Find current active index
+    images.forEach((img, index) => {
+        if (img.classList.contains('active')) {
+            currentIndex = index;
+        }
+    });
+
+    if (currentIndex === -1) return;
+
+    // Remove active from current
+    images[currentIndex].classList.remove('active');
+
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    if (newIndex >= images.length) newIndex = 0;
+    if (newIndex < 0) newIndex = images.length - 1;
+
+    // Add active to new
+    images[newIndex].classList.add('active');
+}
+
+// Navbar scroll detection
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+});
+
+// Navbar scroll detection
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+});
+
     </script>
 </body>
 
