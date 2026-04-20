@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayyappan | Portfolio</title>
-    <link rel="icon" href="" style="border-radius: 100%;" >
+    <link rel="icon" href="" style="border-radius: 100%;">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -149,7 +152,7 @@
 
 
 
-    
+
 
     <main id="Projects" class="content">
         <section class="projects-hero">
@@ -261,8 +264,7 @@ Horror: Supernatural and psychological thrillers (Demonte Colony 2, Aranmanai).
                     <div class="project-card" data-project-id="study">
                         <div class="project-image-container">
                             <div class="carousel-wrapper">
-                                <img src="./assets/images/mystudy1.png" alt="My Study Life"
-                                    class="project-img active">
+                                <img src="./assets/images/mystudy1.png" alt="My Study Life" class="project-img active">
                                 <img src="./assets/images/mystudy2.png" alt="Alt 1" class="project-img">
                                 <img src="./assets/images/mystudy3.png" alt="Alt 1" class="project-img">
                                 <img src="./assets/images/mystudy4.png" alt="Alt 1" class="project-img">
@@ -309,7 +311,7 @@ Railway Exams - Grades A, B, C, D</pre>
         </section>
     </main>
 
-    
+
 
     <div id="Contact" class="container">
         <h2 class="section-title text-center">Contact <span class="highlight">Me</span></h2>
@@ -350,7 +352,8 @@ Railway Exams - Grades A, B, C, D</pre>
                 <div class="mapouter">
                     <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
                             marginheight="0" marginwidth="0"
-                            src="https://maps.google.com/maps?width=1233&amp;height=673&amp;hl=en&amp;q=paramakudi&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                            src="https://maps.google.com/maps?width=1233&amp;height=673&amp;hl=en&amp;q=paramakudi&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -363,8 +366,32 @@ Railway Exams - Grades A, B, C, D</pre>
             <div class="footer-bottom" style="justify-content: center; gap: 0; padding-top: 20px;">
                 <div class="copyright">
                     &copy; 2026 Ayyappan. All rights reserved.
-        </div>
+                </div>
     </footer>
+
+    <!-- Style Switcher -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler">
+            <i class="fa-solid fa-gear fa-spin"></i>
+        </div>
+        <div class="s-header">Select Color</div>
+        <div class="s-content colors">
+            <span style="background: #3b82f6;" onclick="setActiveStyle('#3b82f6')"></span>
+            <span style="background: #f7709a;" onclick="setActiveStyle('#f7709a')"></span>
+            <span style="background: #a855f7;" onclick="setActiveStyle('#a855f7')"></span>
+            <span style="background: #10b981;" onclick="setActiveStyle('#10b981')"></span>
+            <span style="background: #f59e0b;" onclick="setActiveStyle('#f59e0b')"></span>
+            <span style="background: #64748b;" onclick="setActiveStyle('#64748b')"></span>
+            <span style="background: #d946ef;" onclick="setActiveStyle('#d946ef')"></span>
+            <span style="background: #f97316;" onclick="setActiveStyle('#f97316')"></span>
+            <span style="background: #ef4444;" onclick="setActiveStyle('#ef4444')"></span>
+        </div>
+        <div class="s-header">Dark Mode</div>
+        <div class="s-content dark-mode-content">
+            <span class="mode-btn dark-btn" onclick="setDarkMode('dark')" title="Dark Mode"></span>
+            <span class="mode-btn light-btn" onclick="setDarkMode('light')" title="Light Mode"></span>
+        </div>
+    </div>
 
     <script>
         // Hamburger Menu Toggle
@@ -376,8 +403,6 @@ Railway Exams - Grades A, B, C, D</pre>
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
             });
-
-            // Close menu when a link is clicked
             navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');
@@ -387,77 +412,60 @@ Railway Exams - Grades A, B, C, D</pre>
         }
 
         // Navbar scroll detection
-        document.addEventListener('DOMContentLoaded', () => {
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                });
-            }
-        });
-
-
-        function moveCarousel(projectId, direction) {
-    const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
-    if (!card) return;
-
-    const images = card.querySelectorAll('.project-img');
-    let currentIndex = -1;
-
-    // Find current active index
-    images.forEach((img, index) => {
-        if (img.classList.contains('active')) {
-            currentIndex = index;
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
         }
-    });
 
-    if (currentIndex === -1) return;
+        // Carousel
+        function moveCarousel(projectId, direction) {
+            const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
+            if (!card) return;
+            const images = card.querySelectorAll('.project-img');
+            let currentIndex = -1;
+            images.forEach((img, index) => {
+                if (img.classList.contains('active')) currentIndex = index;
+            });
+            if (currentIndex === -1) return;
+            images[currentIndex].classList.remove('active');
+            let newIndex = currentIndex + direction;
+            if (newIndex >= images.length) newIndex = 0;
+            if (newIndex < 0) newIndex = images.length - 1;
+            images[newIndex].classList.add('active');
+        }
 
-    // Remove active from current
-    images[currentIndex].classList.remove('active');
+        // Style Switcher toggle
+        document.querySelector(".style-switcher-toggler").addEventListener("click", () => {
+            document.querySelector(".style-switcher").classList.toggle("open");
+        });
 
-    // Calculate new index
-    let newIndex = currentIndex + direction;
-    if (newIndex >= images.length) newIndex = 0;
-    if (newIndex < 0) newIndex = images.length - 1;
-
-    // Add active to new
-    images[newIndex].classList.add('active');
-}
-
-// Navbar scroll detection
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        // Hide style switcher on scroll
+        window.addEventListener("scroll", () => {
+            const switcher = document.querySelector(".style-switcher");
+            if (switcher && switcher.classList.contains("open")) {
+                switcher.classList.remove("open");
             }
         });
-    }
-});
 
-// Navbar scroll detection
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+        // Color changer
+        function setActiveStyle(color) {
+            document.documentElement.style.setProperty('--skin-color', color);
+            document.documentElement.style.setProperty('--rose-color', color);
+        }
+
+        // Dark / Light mode
+        function setDarkMode(mode) {
+            if (mode === 'light') {
+                document.body.classList.add('light-mode');
             } else {
-                navbar.classList.remove('scrolled');
+                document.body.classList.remove('light-mode');
             }
-        });
-    }
-});
-
+        }
     </script>
 </body>
+
+</html>
 
 </html>
