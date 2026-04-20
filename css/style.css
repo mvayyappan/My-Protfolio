@@ -446,7 +446,7 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2in;
+    gap: 1in;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 80px;
@@ -455,7 +455,7 @@ body {
 
 .project-card {
     position: relative;
-    height: 700px;
+    height: 600px;
     width: 870px;
     background: #0f172a;
     border-radius: 12px;
@@ -522,6 +522,8 @@ body {
 .carousel-btn.next {
     right: -55px;
 }
+
+
 
 
 
@@ -705,7 +707,7 @@ body {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .submit-btn {
@@ -968,4 +970,13 @@ body.light-mode .carousel-btn {
     background: #fff;
     color: #333;
     border: 1px solid #ccc;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 5%;
+    background: var(--primary-color);
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 1.10em;
 }
