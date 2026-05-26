@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayyappan | Portfolio</title>
     <link rel="icon" href="" style="border-radius: 100%;">
-    <link rel="stylesheet" href="/My-Protfolio/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Pacifico&display=swap"
         rel="stylesheet">
@@ -18,7 +18,9 @@
         <div class="nav-logo">Ayyappan</div>
         <div class="hamburger" id="hamburger"></div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="/My-Protfolio/">Home</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
@@ -26,7 +28,7 @@
 
     <div class="hero-video-container">
         <video autoplay muted loop playsinline class="hero-video-bg">
-            <source src="/My-Protfolio/assets/videos/index_backgroud_video.mp4">
+            <source src="assets/videos/index_backgroud_video.mp4">
         </video>
         <div class="hero-overlay"></div>
     </div>
@@ -38,7 +40,7 @@
                 <div class="hero-image-col">
                     <div class="image-frame">
                         <div class="frame-backdrop"></div>
-                        <img src="/My-Protfolio/assets/images/Ayyappan1.jpeg" alt="Profile" class="hero-profile-img">
+                        <img src="assets/images/Ayyappan1.jpeg" alt="Profile" class="hero-profile-img">
                     </div>
                 </div>
                 <div class="hero-text-col">
@@ -51,7 +53,7 @@
                         and elegant UI designs.
                     </p>
                     <div class="hero-actions">
-                        <a href="/My-Protfolio/assets/files/Ayyappan_Resume.pdf" target="_blank" download="Ayyappan_Resume_CV"
+                        <a href="./assets/files/Ayyappan_Resume.pdf" target="_blank" download="Ayyappan_Resume_CV"
                             class="btn btn-pink">Download CV</a>
                         <a href="#about" class="btn btn-pink">More Info</a>
                     </div>
@@ -150,8 +152,51 @@
         </div>
     </section>
 
+    <!-- Education & Journey Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title text-center">My <span class="highlight">Journey</span></h2>
+            <div class="timeline-container">
 
+                <!-- Milestone 1: S.N.V. School -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 – 2025</div>
+                    <div class="timeline-content">
+                        <h3>High School <span class="tl-badge"> Journey</span></h3>
+                        <p>A beautiful chapter of growth, friendships, and learning from Class 6 to 12th at S.N.V. Government Model Higher Secondary School, Paramakudi. Culminated in completing my 12th grade in 2024, leaving behind cherished memories and stepping forward with confidence.</p>
+                        <div class="polaroid-wrap">
+                            <div class="polaroid-frame">
+                                <img src="./assets/images/snv.webp" alt="S.N.V. Government Model Higher Secondary School" class="polaroid-img">
+                                <div class="polaroid-caption">
+                                    <i class="fa-solid fa-location-dot"></i> S.N.V.School, Paramakudi
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Milestone 2: Academy -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Academic <span class="tl-badge tl-badge--active">Journey</span></h3>
+                        <p>Joined FSSA Academy to start my tech journey. It is a great experience filled with coding, teamwork, and making new friends. Along with these good memories, I am learning web development and communication skills to become a software developer.</p>
+                        <div class="polaroid-wrap">
+                            <div class="polaroid-frame">
+                                <img src="./assets/images/freshworks.png" alt="S.N.V. Government Model Higher Secondary School" class="polaroid-img">
+                                <div class="polaroid-caption">
+                                    <i class="fa-solid fa-location-dot"></i> FSSA Academy, Chennai
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
     <main id="Projects" class="content">
@@ -166,10 +211,10 @@
                     <div class="project-card" data-project-id="study">
                         <div class="project-image-container">
                             <div class="carousel-wrapper">
-                                <img src="/My-Protfolio/assets/images/mystudy1.png" alt="My Study Life" class="project-img active">
-                                <img src="/My-Protfolio/assets/images/mystudy2.png" alt="Alt 1" class="project-img">
-                                <img src="/My-Protfolio/assets/images/mystudy3.png" alt="Alt 1" class="project-img">
-                                <img src="/My-Protfolio/assets/images/mystudy4.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/mystudy1.png" alt="My Study Life" class="project-img active">
+                                <img src="./assets/images/mystudy2.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/mystudy3.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/mystudy4.png" alt="Alt 1" class="project-img">
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveCarousel('study', -1)"><i
@@ -208,10 +253,10 @@ TNPSC (Tamil Nadu Public Service Commission), SSC (Staff Selection Commission), 
                     <div class="project-card" data-project-id="movie">
                         <div class="project-image-container">
                             <div class="carousel-wrapper">
-                                <img src="/My-Protfolio/assets/images/movie1.png" alt="Movie Review" class="project-img active">
-                                <img src="/My-Protfolio/assets/images/movie2.png" alt="Alt 1" class="project-img">
-                                <img src="/My-Protfolio/assets/images/movie3.png" alt="Alt 1" class="project-img">
-                                <img src="/My-Protfolio/assets/images/movie4.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/movie1.png" alt="Movie Review" class="project-img active">
+                                <img src="./assets/images/movie2.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/movie3.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/movie4.png" alt="Alt 1" class="project-img">
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveCarousel('movie', -1)"><i
@@ -256,10 +301,10 @@ Horror: Supernatural and psychological thrillers (Demonte Colony 2, Aranmanai).
                     <div class="project-card" data-project-id="cleaning">
                         <div class="project-image-container">
                             <div class="carousel-wrapper">
-                                <img src="/My-Protfolio/assets/images/cleaner1.png" alt="Cleaning Service"
+                                <img src="./assets/images/cleaner1.png" alt="Cleaning Service"
                                     class="project-img active">
-                                <img src="/My-Protfolio/assets/images/cleaner2.png" alt="Alt 1" class="project-img">
-                                <img src="/My-Protfolio/assets/images/cleaner3.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/cleaner2.png" alt="Alt 1" class="project-img">
+                                <img src="./assets/images/cleaner3.png" alt="Alt 1" class="project-img">
                             </div>
                         </div>
                         <button class="carousel-btn prev" onclick="moveCarousel('cleaning', -1)"><i
@@ -298,16 +343,6 @@ Target Clients: Homeowners, Businesses, Busy Professionals.
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-                    
-
-
-                    
                 </div>
             </div>
         </section>
@@ -387,47 +422,30 @@ Target Clients: Homeowners, Businesses, Busy Professionals.
     </div>
 
     <script>
-    function moveCarousel(projectId, direction) {
-    const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
-    if (!card) return;
+        // Carousel for Projects
+        function moveCarousel(projectId, direction) {
+            const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
+            if (!card) return;
 
-    const images = card.querySelectorAll('.project-img');
-    let currentIndex = -1;
+            const images = card.querySelectorAll('.project-img');
+            let currentIndex = -1;
 
-    // Find current active index
-    images.forEach((img, index) => {
-        if (img.classList.contains('active')) {
-            currentIndex = index;
-        }
-    });
-
-    if (currentIndex === -1) return;
-
-    // Remove active from current
-    images[currentIndex].classList.remove('active');
-
-    // Calculate new index
-    let newIndex = currentIndex + direction;
-    if (newIndex >= images.length) newIndex = 0;
-    if (newIndex < 0) newIndex = images.length - 1;
-
-    // Add active to new
-    images[newIndex].classList.add('active');
-}
-
-    // Navbar scroll detection
-    document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.querySelector('.navbar');
-        if (navbar) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+            images.forEach((img, index) => {
+                if (img.classList.contains('active')) {
+                    currentIndex = index;
                 }
             });
+
+            if (currentIndex === -1) return;
+
+            images[currentIndex].classList.remove('active');
+
+            let newIndex = currentIndex + direction;
+            if (newIndex >= images.length) newIndex = 0;
+            if (newIndex < 0) newIndex = images.length - 1;
+
+            images[newIndex].classList.add('active');
         }
-    });
 
         // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
@@ -452,23 +470,6 @@ Target Clients: Homeowners, Businesses, Busy Professionals.
             window.addEventListener('scroll', () => {
                 navbar.classList.toggle('scrolled', window.scrollY > 50);
             });
-        }
-
-        // Carousel
-        function moveCarousel(projectId, direction) {
-            const card = document.querySelector(`.project-card[data-project-id="${projectId}"]`);
-            if (!card) return;
-            const images = card.querySelectorAll('.project-img');
-            let currentIndex = -1;
-            images.forEach((img, index) => {
-                if (img.classList.contains('active')) currentIndex = index;
-            });
-            if (currentIndex === -1) return;
-            images[currentIndex].classList.remove('active');
-            let newIndex = currentIndex + direction;
-            if (newIndex >= images.length) newIndex = 0;
-            if (newIndex < 0) newIndex = images.length - 1;
-            images[newIndex].classList.add('active');
         }
 
         // Style Switcher toggle
@@ -498,7 +499,10 @@ Target Clients: Homeowners, Businesses, Busy Professionals.
                 document.body.classList.remove('light-mode');
             }
         }
+
+
     </script>
+>>>>
 </body>
 
 </html>

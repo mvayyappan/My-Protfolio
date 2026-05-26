@@ -778,6 +778,214 @@ body {
     border: 2px dashed #e0e0e0;
 }
 
+/* ==========================================
+   NEW STYLES (Journey Timeline)
+   ========================================== */
+
+/* Journey Timeline */
+.timeline-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 15px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -9px;
+    background-color: #0a0a0a;
+    border: 4px solid var(--skin-color);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 12px var(--skin-color);
+}
+
+.timeline-item.right .timeline-dot {
+    left: -9px;
+}
+
+.timeline-date {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin-bottom: 8px;
+    display: inline-block;
+    transition: color 0.4s ease;
+}
+
+.timeline-content {
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.timeline-content:hover {
+    border-color: var(--skin-color);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.timeline-content p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* Polaroid Photo Frame */
+.polaroid-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.polaroid-frame {
+    background: #ffffff;
+    padding: 10px 10px 40px 10px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0,0,0,0.3);
+    transform: rotate(-2deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 340px;
+    width: 100%;
+    position: relative;
+}
+
+.polaroid-frame:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.polaroid-img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.polaroid-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    letter-spacing: 0.3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.polaroid-caption i {
+    color: var(--skin-color);
+    margin-right: 5px;
+}
+
+body.light-mode .polaroid-frame {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Light Mode Overrides for Timeline */
+body.light-mode .timeline-container::after {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .timeline-dot {
+    background-color: #ffffff;
+}
+
+body.light-mode .timeline-content {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .timeline-content:hover {
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .timeline-content h3 {
+    color: #0f172a;
+}
+
+body.light-mode .timeline-content p {
+    color: #475569;
+}
+
+/* Responsiveness for timeline */
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item.left {
+        left: 0;
+    }
+    .timeline-item.right {
+        left: 0;
+    }
+    .timeline-dot {
+        left: 21px !important;
+        right: auto;
+    }
+}
+
 /* Style Switcher */
 .style-switcher {
     position: fixed;
@@ -974,9 +1182,16 @@ body.light-mode .carousel-btn {
 
 .footer {
     text-align: center;
-    padding: 25px 5%;
-    background: var(--primary-color);
-    color: #ff0000;
-    font-weight: 600;
-    font-size: 1.10em;
+    padding: 30px 5%;
+    background: #050505;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode .footer {
+    background: #f8fafc;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
 }
