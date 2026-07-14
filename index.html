@@ -179,7 +179,7 @@
                 <!-- Milestone 2: Academy -->
                 <div class="timeline-item right">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 – Present</div>
+                    <div class="timeline-date">2025 – 2026</div>
                     <div class="timeline-content">
                         <h3>Academic <span class="tl-badge tl-badge--active">Journey</span></h3>
                         <p>Joined FSSA Academy to start my tech journey. It is a great experience filled with coding, teamwork, and making new friends. Along with these good memories, I am learning web development and communication skills to become a software developer.</p>
@@ -188,6 +188,24 @@
                                 <img src="./assets/images/freshworks.png" alt="S.N.V. Government Model Higher Secondary School" class="polaroid-img">
                                 <div class="polaroid-caption">
                                     <i class="fa-solid fa-location-dot"></i> FSSA Academy, Chennai
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: Spikra Private Limited -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Professional <span class="tl-badge tl-badge--active">Journey</span></h3>
+                        <p>Joined Spikra Private Limited, Where I am learning real-world business operations and enterprise solutions.I am gaining comprehensive business knowledge. Currently specializing and mastering Zoho ONE tools to become a proficient CRM professional.</p>
+                        <div class="polaroid-wrap">
+                            <div class="polaroid-frame">
+                                <img src="./assets/images/Spikra.jpeg" alt="Spikra Private Limited" class="polaroid-img">
+                                <div class="polaroid-caption">
+                                    <i class="fa-solid fa-briefcase"></i> Spikra Private Limited
                                 </div>
                             </div>
                         </div>
@@ -359,21 +377,25 @@ Target Clients: Homeowners, Businesses, Busy Professionals.
 
                 <div id="alertBox" class="alert"></div>
 
-                <form id="contactForm">
+                <form action="https://formsubmit.co/mvayyappan10@gmail.com" method="POST" id="contactForm">
                     <div class="form-group">
                         <label>Full Name *</label>
-                        <input type="text" id="name" placeholder="Enter your full name" required>
+                        <input type="text" name="Full Name" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Email Address *</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
+                        <input type="email" name="email" placeholder="your@email.com" required>
                     </div>
 
                     <div class="form-group">
                         <label>Message *</label>
-                        <textarea id="message" placeholder="Write your message here..." required></textarea>
+                        <textarea name="message" placeholder="Write your message here..." required></textarea>
                     </div>
+
+                    <input type="hidden" name="_subject" value="New message from {Full Name}">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://mvayyappan.github.io/My-Portfolio/#Contact">
 
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
